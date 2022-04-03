@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div>
+<table>
+    <thead>
+        <tr>
+            <th> result </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+	
+        <tr th:each="book : ${resultList}">
+            <td><span th:text="${book}"> Title </span></td>
+            
+        </tr>
+    </tbody>
+    
+    <form th:action = "@{/gg}"  method="get">
+  
+  <input type="submit" placeholder="again"/>
+</form>
+</table>
+</div>
+</body>
+</html>
